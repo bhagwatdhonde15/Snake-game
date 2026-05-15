@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Neon Snake Arcade</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- Background Canvas for static/animated background -->
+        <canvas id="bg-canvas"></canvas>
+        <!-- Main Game Canvas -->
+        <canvas id="game-canvas"></canvas>
+
+        <!-- UI Overlay -->
+        <div id="ui-layer">
+            <div id="hud">
+                <div class="score-box">SCORE: <span id="score">0</span></div>
+                <div class="high-score-box">BEST: <span id="high-score">0</span></div>
+                <div id="combo-display" class="hidden">COMBO x<span id="combo-multiplier">1</span>!</div>
+            </div>
+
+            <div id="start-screen" class="screen active">
+                <h1 class="glitch" data-text="NEON SNAKE">NEON SNAKE</h1>
+                <p>Swipe or use Arrow Keys to move</p>
+                <button id="start-btn" class="neon-btn">INSERT COIN</button>
+            </div>
+
+            <div id="pause-screen" class="screen hidden">
+                <h2>PAUSED</h2>
+                <button id="resume-btn" class="neon-btn">RESUME</button>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h2>GAME OVER</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <p id="new-high-score-msg" class="hidden glow-text">NEW HIGH SCORE!</p>
+                <button id="restart-btn" class="neon-btn">PLAY AGAIN</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/audio.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/food.js"></script>
+    <script src="js/snake.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
